@@ -33,15 +33,127 @@
 
     <div class="container text-left" style="margin-top: 56px;">  
         <div class="p-4">
-            <h2>Censo nacional de poblacion</h2 >
+            <h2 class="text-primary">Censo nacional de poblacion</h2>
         </div> 
-        <div class="p-4">
-            
-            <div id="data-container" class="data-container">
-
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-md-6"> <!-- Limita el ancho en pantallas medianas y mayores -->
+              <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Buscar..." aria-label="Buscar" aria-describedby="button-addon2">
+                <div class="input-group-append">
+                  <button class="btn btn-outline-secondary" type="button" id="button-addon2">Buscar</button>
+                </div>
+              </div>
             </div>
+          </div>
+        </div>
+        <div class="p-4">
+          <div class="container mt-5">
+            <!-- Información General -->
+            <section class="mb-4">
+              <h3  class="text-primary">Información General</h3>
+              <div class="card">
+                <div class="card-body">
+                  <p><strong>Departamento:</strong> <span id="departamento"></span></p>
+                  <p><strong>Municipio:</strong> <span id="municipio"></span></p>
+                  <p><strong>Extensión Territorial:</strong> <span id="ext_territorial"></span></p>
+                  <p><strong>Total de Lugares:</strong> <span id="total_lugares"></span></p>
+                </div>
+              </div>
+            </section>
         
-
+            <!-- Población Total -->
+            <section class="mb-4">
+              <h3  class="text-primary">Población Total</h3>
+              <div class="card">
+                <div class="card-body">
+                  <p><strong>Población Total:</strong> <span id="poblacion_total"></span></p>
+                  <p><strong>Índice de Masculinidad:</strong> <span id="indice_masculinidad"></span></p>
+                  <p><strong>Promedio de Hijos por Mujer:</strong> <span id="prom_hijos_mujer"></span></p>
+                  <p><strong>Edad Promedio:</strong> <span id="edad_promedio"></span></p>
+                  <p><strong>Índice de Dependencia:</strong> <span id="indice_dependencia"></span></p>
+                  <p><strong>Años Promedio de Estudio:</strong> <span id="anios_prom_estudio"></span></p>
+                  <p><strong>Alfabetismo:</strong> <span id="alfabetismo"></span></p>
+                </div>
+              </div>
+            </section>
+        
+            <!-- Viviendas y Hogares -->
+            <section class="mb-4">
+              <h3  class="text-primary">Viviendas y Hogares</h3>
+              <div class="card">
+                <div class="card-body">
+                  <p><strong>Viviendas Particulares:</strong> <span id="viviendas_part"></span></p>
+                  <p><strong>Total de Hogares:</strong> <span id="total_hogares"></span></p>
+                  <p><strong>Promedio de Personas por Hogar:</strong> <span id="prom_personas_hogar"></span></p>
+                  <p><strong>Total de Jefas de Hogar:</strong> <span id="total_jefas_hogar"></span></p>
+                </div>
+              </div>
+            </section>
+        
+            <!-- Datos por Sexo -->
+            <section class="mb-4">
+              <h3 class="text-primary">Datos por Sexo</h3>
+              <div class="card">
+                <div class="card-body">
+                  <p><strong>Total de Hombres:</strong> <span id="total_sexo_hombre"></span></p>
+                  <p><strong>Porcentaje de Hombres:</strong> <span id="porc_sexo_hombre"></span></p>
+                  <p><strong>Total de Mujeres:</strong> <span id="total_sexo_mujeres"></span></p>
+                  <p><strong>Porcentaje de Mujeres:</strong> <span id="porc_sexo_mujeres"></span></p>
+                </div>
+              </div>
+            </section>
+        
+            <!-- Sector Urbano/Rural -->
+            <section class="mb-4">
+              <h3 class="text-primary">Sector Urbano/Rural</h3>
+              <div class="card">
+                <div class="card-body">
+                  <p><strong>Total en Sector Urbano:</strong> <span id="total_sector_urbano"></span></p>
+                  <p><strong>Porcentaje en Sector Urbano:</strong> <span id="porc_sector_urbano"></span></p>
+                  <p><strong>Total en Sector Rural:</strong> <span id="total_sector_rural"></span></p>
+                  <p><strong>Porcentaje en Sector Rural:</strong> <span id="porc_sector_rural"></span></p>
+                </div>
+              </div>
+            </section>
+        
+            <!-- Población por Edad -->
+            <section class="mb-4">
+              <h3 class="text-primary">Población por Edad</h3>
+              <div class="card">
+                <div class="card-body">
+                  <p><strong>Población 0-14 Años:</strong> <span id="pob_edad_014"></span></p>
+                  <p><strong>Porcentaje 0-14 Años:</strong> <span id="porc_edad_014"></span></p>
+                  <p><strong>Población 15-64 Años:</strong> <span id="pob_edad_1564"></span></p>
+                  <p><strong>Porcentaje 15-64 Años:</strong> <span id="porc_edad_1564"></span></p>
+                  <p><strong>Población 65+ Años:</strong> <span id="pob_edad_65"></span></p>
+                  <p><strong>Porcentaje 65+ Años:</strong> <span id="porc_edad_65"></span></p>
+                </div>
+              </div>
+            </section>
+        
+            <!-- Población por Etnia -->
+            <section class="mb-4">
+              <h3 class="text-primary">Población por Etnia</h3>
+              <div class="card">
+                <div class="card-body">
+                  <p><strong>Pueblo Maya:</strong> <span id="pob_pueblo_maya"></span></p>
+                  <p><strong>Porcentaje Pueblo Maya:</strong> <span id="porc_pueblo_maya"></span></p>
+                  <p><strong>Pueblo Garífuna:</strong> <span id="pob_pueblo_garifuna"></span></p>
+                  <p><strong>Porcentaje Pueblo Garífuna:</strong> <span id="porc_pueblo_garifuna"></span></p>
+                  <p><strong>Pueblo Xinca:</strong> <span id="pob_pueblo_xinca"></span></p>
+                  <p><strong>Porcentaje Pueblo Xinca:</strong> <span id="porc_pueblo_xinca"></span></p>
+                  <p><strong>Pueblo Afrodescendiente:</strong> <span id="pob_pueblo_afrodescendiente"></span></p>
+                  <p><strong>Porcentaje Pueblo Afrodescendiente:</strong> <span id="porc_pueblo_afrodescendiente"></span></p>
+                  <p><strong>Pueblo Ladino:</strong> <span id="pob_pueblo_ladino"></span></p>
+                  <p><strong>Porcentaje Pueblo Ladino:</strong> <span id="porc_pueblo_ladino"></span></p>
+                  <p><strong>Pueblo Extranjero:</strong> <span id="pob_pueblo_extranjero"></span></p>
+                  <p><strong>Porcentaje Pueblo Extranjero:</strong> <span id="porc_pueblo_extranjero"></span></p>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
     </div>
 
 
